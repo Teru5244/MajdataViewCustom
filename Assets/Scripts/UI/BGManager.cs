@@ -107,8 +107,9 @@ public class BGManager : MonoBehaviour
         videoPlayer.time = provider.AudioTime;
 
         var scale = (float)videoPlayer.height/(float)videoPlayer.width;
-        spriteRender.sprite = Sprite.Create(new Texture2D(1080, 1080), new Rect(0, 0, 1080, 1080), new Vector2(0.5f, 0.5f));
-        gameObject.transform.localScale = new Vector3(1f, scale);
+        spriteRender.sprite = Sprite.Create(new Texture2D(1920, 1080),
+            new Rect(0, 0, 1920, 1080), new Vector2(0.5f, 0.5f));
+        gameObject.transform.localScale = new Vector3(1f, 1f);
     }
     // Update is called once per frame
     float smoothRDelta = 0;
